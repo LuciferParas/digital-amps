@@ -8,7 +8,7 @@ app =Flask(__name__)
 
 app.config['SECRET_KEY'] = 'f9bf78b9a18ce6d46a0cd2b0b86df9da'
 app.config['MAIL_SERVER'] = 'smtpout.secureserver.net'
-app.config['MAIL_PORT'] = 587
+app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] ="no-reply@niompmo.com"
 app.config['MAIL_PASSWORD'] = "niompmo@12345"
 app.config['MAIL_USE_TLS'] = True

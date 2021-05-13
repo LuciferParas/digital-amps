@@ -4,3 +4,4 @@ flask_mail
 PyPDF2
 reportlab
 gunicorn
+jinja2
