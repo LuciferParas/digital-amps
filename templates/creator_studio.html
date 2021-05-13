@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block link %}<link rel="stylesheet" href="{{ url_for('static',filename='styles/creatorStudio.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/visual.css') }}">{% endblock %}
+{% block title %}Digital A.M.P.S{% endblock %}
+{% block body %}
+<div class="flex flex-center-center w100 p-small head2c">
+    <div class="flex w100 flex-center-center font-medium font-weight-medium txt-center p-small">
+        Answer the AMPS Digital Strategy Framework Questions 
+    </div>
+</div>
+<div class="flex flex-center-center w100" >
+    <div class="flex-outer-container " style="width: 65%;">
+        <div class="flex-inner-container side-img" >
+            <img src="{{ url_for('static',filename='images/img.jpg') }}" alt="">
+        </div>
+        <div class="flex-inner-container side-text font-normal font-weight-normal">
+            Here’s an example of what your Stratahedron will look like with all of your custom elements completed. 
+            You complete each element by answering the following series of questions:
+        </div>
+    </div> 
+</div>
+<div class="flex-outer-container w100 p-small">
+    <div class="flex-inner-container question-container qa">
+    </div>
+    <div class="flex-inner-container question-container">
+            <div class="outer-box-container w100 flex flex-center-center h-auto" style="position: relative; border: 1px solid black;">
+                <div class="flex w100 flex-center-center">
+                    <div class="square1">
+                        <div class="head1 visual-font-large font-weight-medium l1"></div>
+                        <div class="line1 visual-font-medium font-weight-normal l2"></div>
+                        <div class="line2 visual-font-medium font-weight-normal l3"></div>
+                        <div class="line3 visual-font-medium font-weight-normal l4"></div>
+                        <div class="extra1 visual-font-small font-weight-medium ">Certainity</div>
+                        <div class="head2 visual-font-large font-weight-medium l5"></div>
+                        <div class="d-line1 visual-font-medium font-weight-normal l6"></div>
+                        <div class="d-line2 visual-font-medium font-weight-normal l7"></div>
+                        <div class="d-line3 visual-font-medium font-weight-normal l8"></div>
+                        <div class="d-extra1 visual-font-small1  l9" style="height: 2vw; width: 7vw;"></div>
+                        <div class="d-extra2 visual-font-small1  l10" style="height: 1.4vw; width: 10vw;"></div>
+                        <div class="d-extra3 visual-font-small1  l11" style="height: 1.4vw; width: 10vw;"></div>
+                    </div>
+                    <div class="square3" >
+                        <div class="square3-inner">
+                            <div class="head1 visual-font-large font-weight-medium l12"></div>
+                            <div class="line1 visual-font-medium font-weight-normal lr-line1 l13"></div>
+                            <div class="line2 visual-font-medium font-weight-normal l14"></div>
+                            <div class="line3 visual-font-medium font-weight-normal l15"></div>
+                            <div class="extra3 visual-font-small font-weight-medium">Competancy</div>
+                        </div>
+                    </div>
+                    <div class="square2" >
+                        <div class="square2-inner">
+                            <div class="head1 visual-font-large font-weight-medium l16"></div>
+                            <div class="line1 visual-font-medium font-weight-normal lr-line1 l17"></div>
+                            <div class="line2 visual-font-medium font-weight-normal l18"></div>
+                            <div class="line3 visual-font-medium font-weight-normal l19"></div>
+                            <div class="extra2 visual-font-small font-weight-medium x">Clarity</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<div class="flex w100 flex-center-center p-small">
+    <span class="btn font-medium pop-up">Finsh Design</span>
+</div>
+<div class="outer-box reg-outer-container">
+    <div class="reg-form flex flex-center-center p-small">
+        <div class="outer-box flex flex-center-center w100" style="position: relative; height: 500px;">
+            <div class="cross w100 flex flex-center-center p-small">
+                <div class="cl1"></div>
+                <div class="cl1"></div>
+            </div>
+            <div class="flex w100 flex-center-center font-large font-weight-medium p-small form-head" style="position: relative;">
+                Enter Your Details To Finish Your Design
+            </div>
+            <form  id="reg-form1" style="width: 80%;">
+                <div class="flex w100 flex-center p-small">
+                    <div class="flex flex-center-center  font-medium p-small" style="width: 30%;">Full Name</div>
+                    <div class="flex flex-center-center w50" style="width: 70%;"><input type="text" name="full_name" class="rf rf0"></div>
+                </div>
+                <div class="flex w100 flex-center p-small" >
+                    <div class="flex flex-center-center  font-medium p-small" style="width: 30%;">Email</div>
+                    <div class="flex flex-center-center w50" style="width: 70%;"><input type="text" name="email" class="rf rf1"></div>
+                </div>
+                <div class="flex w100 flex-center p-small" >
+                    <div class="flex flex-center-center  font-medium p-small" style="width: 30%;">Phone Number</div>
+                    <div class="flex flex-center-center w50" style="width: 70%;"><input type="text" name="phone_number" class="rf rf2"></div>
+                </div>
+                <div class="flex w100 flex-center p-small" >
+                    <div class="flex flex-center-center  font-medium p-small" style="width: 30%;">Loctaion/City</div>
+                    <div class="flex flex-center-center w50" style="width: 70%;"><input type="text" name="location" class="rf rf3"></div>
+                </div>
+                <div class="flex w100 flex-center p-small" >
+                    <div class="flex flex-center-center  font-medium p-small" style="width: 30%;">Company Website</div>
+                    <div class="flex flex-center-center w50" style="width: 70%;"><input type="text" name="company_website" class="lsf"></div>
+                </div>
+                <div class="flex w100 flex-center-center p-small font-normal font-weight-medium error" style="color: red;"></div>
+                <div class="flex w100 flex-center-center p-small">
+                    <button class="btn font-normal reg-btn" type="submit">Submit</button>
+                </div>
+            </form>
+            <div class="loader"></div>
+            <div class="success-sec flex w100 flex-center-center font-medium font-weight-medium">
+                <span class="flex w100 flex-center-center ">You have successfully created your design.</span>
+                <div class="flex flex-center-center w100 font-normal download" ></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% block js %}
+{% endblock %}
+{% endblock %}

@@ -1,0 +1,35 @@
+.nav {
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  color: #fff;
+  padding: 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+}
+
+.brand {
+  width: fit-content;
+}
+.title {
+  width: 85%;
+  text-align: center;
+  text-align-last: center;
+}
+
+@media (max-width: 1000px) {
+  .brand {
+    width: 100%;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .flex-outer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

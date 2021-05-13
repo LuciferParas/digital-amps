@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.outer-box {
+  display: block;
+  width: 100%;
+  float: left;
+}
+
+.font-large {
+  font-size: 28px;
+}
+
+.font-medium {
+  font-size: 21px;
+}
+
+.font-normal {
+  font-size: 16px;
+}
+
+.font-weight-bold {
+  font-weight: 650;
+}
+
+.font-weight-medium {
+  font-weight: 550;
+}
+
+.font-weight-normal {
+  font-weight: 450;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-center-center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-small {
+  padding: 10px;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w50 {
+  width: 50%;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  display: block;
+}
+
+.flex-outer-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.flex-inner-container {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-guide-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.registration input {
+  width: 70%;
+  padding: 10px 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ele-change input {
+  border: none;
+  border-bottom: 1px dotted black;
+  outline: none;
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 550;
+  text-indent: 0;
+  width: 50% !important;
+  border-radius: 0 !important;
+}
+
+.ele-change input::placeholder {
+  color: black;
+}
+
+.ele-change input:focus {
+  place-content: "";
+}
+
+.head {
+  font-size: 21px !important;
+}
+
+@media (max-width: 768px) {
+  .font-large {
+    font-size: 22px;
+  }
+
+  .font-medium {
+    font-size: 16px;
+  }
+
+  .font-normal {
+    font-size: 12px;
+  }
+
+  .head {
+    font-size: 16px !important;
+  }
+
+  .ele-change input {
+    font-size: 14px;
+    width: 80 !important;
+  }
+
+  .flex-outer-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .registration input {
+    width: 70%;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
