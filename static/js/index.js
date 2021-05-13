@@ -334,6 +334,7 @@ $(document).ready(function(){
                     $(".form-head").empty().text("Enter Your Details To Finish Your Design")
                     $(".reg-form-inner").css({"height":"auto"})
                     $(".load-cont").css({"display":'none'});
+                    console.log(error)
                     $(".error").empty().text("Some unrecognized error");
                 },
             })
