@@ -54,7 +54,7 @@ def creator_studio():
             data_ls.append(data)
         
         file_name = editPDF(dict(zip(data_ls,coordinate_ls)))
-        msg = Message("Digital A.M.P.S", sender = 'no-reply@niompmo.com', recipients = ["madhur@nanotech-softapp.com",request.form["email"]])
+        msg = Message("Digital A.M.P.S", sender = 'no-reply@niompmo.com', recipients = ["projects@nanotech-softapp.com",request.form["email"]])
         msg.html = f"""
             <div style="border: 1px solid black; width: 100%; display: block; float: left; padding: 10px;">
                 <h1 style="width: 100%; text-align: center; font-weight: 600; font-size: 14px;">Digital A.M.P.S</h1>
