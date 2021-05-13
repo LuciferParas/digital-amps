@@ -23,23 +23,24 @@
   position: relative;
   padding: 0;
   transform: rotate(45deg) skew(15deg, 15deg);
+  z-index: 1;
 }
 
 .head1 {
   width: 100%;
   transform: rotate(-45deg);
   position: absolute;
-  bottom: 12vw;
-  left: -2.9vw;
+  bottom: 65%;
+  left: -19%;
   text-align: center;
 }
 
 .head2 {
   width: 100%;
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   position: absolute;
-  bottom: 4.9vw;
-  left: 3.6vw;
+  bottom: 27%;
+  left: 19%;
   text-align: center;
 }
 
@@ -48,13 +49,16 @@
   border-bottom: 0.2vw solid black;
   transform: rotate(-45deg);
   position: absolute;
-  bottom: 9.6vw;
-  left: -4.5vw;
+  bottom: 49%;
+  left: -23.2%;
   text-align: center;
+  line-height: 10%;
+  padding-bottom: 3%;
 }
 
 .lr-line1 {
-  bottom: 10vw;
+  bottom: 50%;
+  left: -22%;
 }
 
 .line2 {
@@ -62,8 +66,8 @@
   text-align: center;
   transform: rotate(-90deg);
   position: absolute;
-  top: 8.7vw;
-  left: -9vw;
+  top: 46%;
+  left: -47%;
 }
 
 .line3 {
@@ -78,9 +82,9 @@
   width: 100%;
   text-align: center;
   position: absolute;
-  top: 9vw;
-  right: -9vw;
-  transform: rotate(90deg);
+  top: 47%;
+  right: -46%;
+  transform: rotate(-90deg);
 }
 
 .d-line2 {
@@ -89,12 +93,11 @@
   left: 0;
   text-align: center;
   position: absolute;
-  transform: rotate(-180deg);
 }
 
 .d-line1 {
   width: 27.8vw;
-  transform: rotate(135deg);
+  transform: rotate(-45deg);
   position: absolute;
   bottom: 8.4vw;
   left: -3.7vw;
@@ -109,8 +112,8 @@
   position: absolute;
   transform: rotate(225deg);
   letter-spacing: 0.05vw;
-  top: 1.2vw;
-  left: -0.3vw;
+  top: 6%;
+  left: -1.9%;
 }
 
 .extra2 {
@@ -120,8 +123,8 @@
   color: #fff;
   transform: rotate(285deg) skew(10deg, 10deg);
   letter-spacing: 0.2vw;
-  bottom: 3.3vw;
-  left: -0.5vw;
+  bottom: 15%;
+  left: -3.5%;
   text-align: center;
   position: absolute;
 }
@@ -134,8 +137,8 @@
   position: absolute;
   transform: rotate(-205deg) skew(-5deg, -5deg);
   letter-spacing: 0.2vw;
-  top: 1.3vw;
-  right: 1.4vw;
+  top: 7.5%;
+  right: 7%;
   text-align: center;
 }
 
@@ -146,8 +149,8 @@
   position: absolute;
   transform: rotate(-315deg);
   letter-spacing: 0.05vw;
-  right: -0.8vw;
-  bottom: 1.5vw;
+  right: -3%;
+  bottom: 10%;
   text-align: center;
 }
 
@@ -157,10 +160,10 @@
   background: #555555;
   color: #fff;
   position: absolute;
-  transform: rotate(165deg) skew(-10deg, -10deg);
+  transform: rotate(-20deg) skew(-10deg, -10deg);
   letter-spacing: 0.05vw;
-  left: 0.4vw;
-  bottom: 1.8vw;
+  left: 3%;
+  bottom: 12%;
 }
 
 .d-extra3 {
@@ -169,10 +172,10 @@
   background: #555555;
   color: #fff;
   position: absolute;
-  transform: rotate(105deg) skew(10deg, 10deg);
+  transform: rotate(-70deg) skew(10deg, 10deg);
   letter-spacing: 0.05vw;
-  right: -2.5vw;
-  top: 4.6vw;
+  right: -10.4%;
+  top: 25%;
 }
 
 .square2 {
@@ -182,8 +185,8 @@
   border-top: 0.3vw solid black;
   border-left: 0.3vw solid black;
   transform: rotate(45deg) skew(15deg, 15deg);
-  bottom: -2.8vw;
-  left: 3.6vw;
+  bottom: -5.4%;
+  left: 8%;
 }
 
 .square3 {
@@ -193,8 +196,8 @@
   border-top: 0.3vw solid black;
   border-left: 0.3vw solid black;
   transform: rotate(45deg) skew(15deg, 15deg);
-  bottom: -2.8vw;
-  right: 3.6vw;
+  bottom: -5.4%;
+  right: 8%;
 }
 
 .square2-inner,
@@ -208,189 +211,12 @@
   .head2c {
     margin-top: 130px;
   }
-  .h-auto {
-    height: 70vw;
-  }
-
-  .square1 {
-    width: 25vw;
-    height: 25vw;
-    border: 0.3vw solid black;
-    position: relative;
-    padding: 0;
-    transform: rotate(45deg) skew(15deg, 15deg);
-  }
-
-  .head1 {
-    width: 100%;
-    transform: rotate(-45deg);
-    position: absolute;
-    bottom: 17vw;
-    left: -5.5vw;
-    text-align: center;
-  }
-
-  .head2 {
-    width: 100%;
-    transform: rotate(135deg);
-    position: absolute;
-    bottom: 6vw;
-    left: 5vw;
-    text-align: center;
-  }
-
-  .line1 {
-    width: 34.9vw;
-    border-bottom: 0.2vw solid black;
-    transform: rotate(-45deg);
-    position: absolute;
-    bottom: 12vw;
-    left: -5.7vw;
-    text-align: center;
-  }
-
-  .lr-line1 {
-    bottom: 12.4vw;
-  }
-
-  .line2 {
-    width: 100%;
-    text-align: center;
-    transform: rotate(-90deg);
-    position: absolute;
-    top: 11.6vw;
-    left: -11.5vw;
-  }
-
-  .line3 {
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    text-align: center;
-  }
-
-  .d-line3 {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 11.6vw;
-    right: -11.5vw;
-    transform: rotate(90deg);
-  }
-
-  .d-line2 {
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    text-align: center;
-    position: absolute;
-    transform: rotate(-180deg);
-  }
-
-  .d-line1 {
-    width: 34.9vw;
-    transform: rotate(135deg);
-    position: absolute;
-    bottom: 11vw;
-    left: -5vw;
-    text-align: center;
-  }
-
-  .extra1 {
-    width: fit-content;
-    padding: 0.3vw;
-    border: 1px solid black;
-    position: absolute;
-    transform: rotate(225deg);
-    letter-spacing: 0.05vw;
-    top: 1.2vw;
-    left: -0.3vw;
-  }
-
-  .extra2 {
-    width: fit-content;
-    padding: 0.2vw;
-    border: 1px solid black;
-    position: absolute;
-    transform: rotate(285deg) skew(10deg, 10deg);
-    letter-spacing: 0.2vw;
-    bottom: 3.2vw;
-    left: -0.5vw;
-    text-align: center;
-  }
-
-  .extra3 {
-    width: fit-content;
-    padding: 0.2vw;
-    border: 1px solid black;
-    position: absolute;
-    transform: rotate(-205deg) skew(-5deg, -5deg);
-    letter-spacing: 0.2vw;
-    top: 1.3vw;
-    right: 1.4vw;
-    text-align: center;
-  }
-
-  .d-extra1 {
-    width: fit-content;
-    padding: 0.3vw;
-    border: 1px solid black;
-    position: absolute;
-    transform: rotate(-315deg);
-    letter-spacing: 0.05vw;
-    right: -0.4vw;
-    bottom: 1.2vw;
-  }
-
-  .d-extra2 {
-    width: fit-content;
-    padding: 0.3vw;
-    border: 1px solid black;
-    position: absolute;
-    transform: rotate(165deg) skew(-10deg, -10deg);
-    letter-spacing: 0.05vw;
-    left: 1vw;
-    bottom: 0.7vw;
-  }
-
-  .d-extra3 {
-    width: fit-content;
-    padding: 0.3vw;
-    border: 1px solid black;
-    position: absolute;
-    transform: rotate(105deg) skew(10deg, 10deg);
-    letter-spacing: 0.05vw;
-    right: -0.7vw;
-    top: 2.9vw;
-  }
 
   .square2 {
-    position: absolute;
-    width: 25vw;
-    height: 25vw;
-    border-top: 0.3vw solid black;
-    border-left: 0.3vw solid black;
-    transform: rotate(45deg) skew(15deg, 15deg);
-    bottom: 0.3vw;
-    left: 22.5vw;
+    left: 29%;
   }
 
   .square3 {
-    position: absolute;
-    width: 25vw;
-    height: 25vw;
-    border-top: 0.3vw solid black;
-    border-left: 0.3vw solid black;
-    transform: rotate(45deg) skew(15deg, 15deg);
-    bottom: 0.3vw;
-    right: 22.5vw;
-  }
-
-  .square2-inner,
-  .square3-inner {
-    width: 25vw;
-    height: 25vw;
-    position: relative;
+    right: 29%;
   }
 }

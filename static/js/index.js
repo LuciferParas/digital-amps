@@ -254,7 +254,7 @@ $(document).ready(function(){
 
 
     $(".pop-up").click(function(){
-        $(".reg-outer-container").show();
+        $(".reg-outer-container").css({'display':'flex'});
     })
 
 
@@ -318,12 +318,13 @@ $(document).ready(function(){
                 beforeSend: function() {
                     $("#reg-form1").hide();
                     $(".form-head").text('');
-                    $(".loader").show();
+                    $(".reg-form-inner").css({"height":"40vh"})
+                    $(".load-cont").css({"display":'flex'});
                 },
                 success: function (data ){
-                    $(".loader").hide();
+                    $(".load-cont").css({"display":'none'});
                     $(".form-head").text('')
-                    $(".success-sec").show();
+                    $(".success-sec").css({"display":"flex"});
                     $(".download").append(`
                         <a href="${window.location.origin}/static/pdf/user_pdf/${JSON.parse(data).link}" download>click here</a> to download your design.
                     `)
@@ -331,14 +332,14 @@ $(document).ready(function(){
                 error: function(error) {
                     $("#reg-form1").show();
                     $(".form-head").empty().text("Enter Your Details To Finish Your Design")
-                    $(".loader").hide();
+                    $(".reg-form-inner").css({"height":"auto"})
+                    $(".load-cont").css({"display":'none'});
                     $(".error").empty().text("Some unrecognized error");
                 },
             })
        }
        return false;
     });
-
     $('.rf0').keyup(function(){
         $('.rf0').css({"border":"1px solid black"})
     })
