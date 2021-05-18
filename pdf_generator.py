@@ -48,8 +48,8 @@ def editPDF(data_dict):
     page.mergePage(content_pdf.getPage(0))
     output_pdf.addPage(page)
     letters = string.digits
-    file_name_random = ''.join(random.choice(letters) for i in range(10))
-    file_name = f"./static/pdf/user_pdf/digital_apms_{file_name_random}.pdf"
+    file_name_random = ''.join(random.choice(letters) for i in range(5))
+    file_name = f"./static/pdf/user_pdf/digital_stratahedron_{file_name_random}.pdf"
     outputStream = open(file_name, "wb")
     output_pdf.write(outputStream)
     outputStream.close()

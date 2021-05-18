@@ -1,35 +1,57 @@
 .nav {
-  background-color: #045de9;
-  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+  background: rgb(173, 44, 26, 1);
   color: #fff;
-  padding: 20px;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 5;
+  padding: 0.5%;
+}
+
+.nav img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
 }
 
 .brand {
   width: fit-content;
+  float: left;
 }
 .title {
-  width: 85%;
+  width: calc(100% - 80px);
   text-align: center;
   text-align-last: center;
+  float: left;
+  padding: 1.2%;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+  .nav img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav img {
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
   .brand {
     width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
   }
 
   .title {
     width: 100%;
-  }
-
-  .flex-outer-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }

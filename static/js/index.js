@@ -269,8 +269,8 @@ $(document).ready(function(){
         var error = 0;
         var full_name = $('.rf0').val();
         var email = $('.rf1').val();
-        var cno = $('.rf2').val();
-        var loc = $('.rf3').val();
+        var cno = $('.rfe2').val();
+        var loc = $('.rfe3').val();
         var comp_web = $('.lsf').val();
 
         $(".rf").each(function(index){
@@ -317,7 +317,7 @@ $(document).ready(function(){
                 },
                 beforeSend: function() {
                     $("#reg-form1").hide();
-                    $(".form-head").text('');
+                    $(".form-head").css({"display":"none"});
                     $(".reg-form-inner").css({"height":"40vh"})
                     $(".load-cont").css({"display":'flex'});
                 },
@@ -326,12 +326,13 @@ $(document).ready(function(){
                     $(".form-head").text('')
                     $(".success-sec").css({"display":"flex"});
                     $(".download").append(`
-                        <a href="${window.location.origin}/static/pdf/user_pdf/${JSON.parse(data).link}" download>click here</a> to download your design.
+                        <a href="${window.location.origin}/static/pdf/user_pdf/${JSON.parse(data).link}" download>Click Here</a> to download & email your Stratahedron Model Design.
                     `)
                 },
                 error: function(error) {
                     $("#reg-form1").show();
-                    $(".form-head").empty().text("Enter Your Details To Finish Your Design")
+                    $(".form-head").css({"display":"flex"});
+                    $(".form-head").empty().text("Please Enter your Details to Complete Your Design")
                     $(".reg-form-inner").css({"height":"auto"})
                     $(".load-cont").css({"display":'none'});
                     console.log(error)
