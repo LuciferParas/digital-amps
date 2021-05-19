@@ -43,7 +43,7 @@ def editPDF(data_dict):
     packet.seek(0)
     content_pdf = PdfFileReader(packet)
     output_pdf = PdfFileWriter()
-    reader = PdfFileReader("./static/pdf/amps.pdf","rb")
+    reader = PdfFileReader("./static/pdf/stratahedron.pdf","rb")
     page = reader.getPage(0)
     page.mergePage(content_pdf.getPage(0))
     output_pdf.addPage(page)
