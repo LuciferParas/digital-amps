@@ -364,7 +364,7 @@ $(document).ready(function(){
                     $(".form-head").text('')
                     $(".success-sec").css({"display":"flex"});
                     $(".download").append(`
-                        <a href="${window.location.origin}/static/pdf/user_pdf/${JSON.parse(data).link}" download>Click Here</a> to download & email your Stratahedron Model Design.
+                        <a href="${window.location.origin}/static/pdf/${JSON.parse(data).link}" download>Click Here</a> to download & email your Stratahedron Model Design.
                     `)
                 },
                 error: function(error) {
