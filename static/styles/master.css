@@ -185,6 +185,11 @@ body {
   .outer-box {
     margin-top: 160px;
   }
+
+  .ele-change input {
+    font-size: 12.375px;
+    width: 80 !important;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -223,6 +228,11 @@ body {
   }
   .outer-box {
     margin-top: 120px;
+  }
+
+  .ele-change input {
+    font-size: 10.125px;
+    width: 80 !important;
   }
 }
 
@@ -264,38 +274,9 @@ body {
   .outer-box {
     margin-top: 120px;
   }
-}
-/* @media (max-width: 768px) {
-  .font-large {
-    font-size: 22px;
-  }
-
-  .font-medium {
-    font-size: 16px;
-  }
-
-  .font-normal {
-    font-size: 12px;
-  }
-
-  .head {
-    font-size: 16px !important;
-  }
 
   .ele-change input {
-    font-size: 14px;
+    font-size: 7.875px;
     width: 80 !important;
   }
-
-  .flex-outer-container {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .registration input {
-    width: 70%;
-    padding: 5px 10px;
-    font-size: 12px;
-  }
-} */
+}

@@ -70,7 +70,7 @@ $(document).ready(function(){
             }
             let str = `
             <div class="flex flex-start font-normal font-weight-medium w100 ele-change" style='${ls.length === 2 ?"padding-left: 50px;":"padding-left: 40px;"}'>
-                    ${len !== 2 && index !==0 ? `<div class="flex flex-center font-weight-medium p-small">${ai}</div>`:'' }
+                    ${len !== 2 && index !==0 ? `<div class="flex flex-center font-weight-medium " style="padding-right: 1%;">${ai}</div>`:'' }
                     ${index !== 0 ? `<div class="flex flex-center-center" style="width:47%;">${ls[0]} ${len !==2 ? `${index}`:''}:</div>`:''}
                     ${index !== 0 ? `<input type="text" placeholder="${ls[index]}" onfocus="this.placeholder=''" onblur="this.placeholder='${ls[index]}'" name="${ls[index]}">`:''}
             </div>`
@@ -86,7 +86,7 @@ $(document).ready(function(){
             const [key, value] = entry
             let str =  `
                 <div class="flex flex-start w100 font-normal font-weight-normal  p-small" style="padding-left: 20px;">
-                    <div class="flex flex-center font-weight-medium p-small">${index+1}.</div>
+                    <div class="flex flex-center font-weight-medium" style="padding-right: 1%;">${index+1}.</div>
                     <div class="flex flex-center-center">
                         ${key}
                     </div>
@@ -121,8 +121,10 @@ $(document).ready(function(){
 
     $("input[name='Audience']").keyup(function(e){
         if(e.target.value.length <= 22){
-            $(".l1").text(e.target.value)
-            mainElementData.line1 = e.target.value
+            $(".l1").text(e.target.value);
+            mainElementData.line1 = e.target.value;
+        }else if(e.target.value.length === 0){
+            mainElementData.line1 = "Audience";
         }
     })
 
@@ -130,6 +132,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l3").text(e.target.value)
             mainElementData.line3 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line3 = "Be seen";
         }
     })
 
@@ -137,6 +141,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l4").text(e.target.value)
             mainElementData.line4 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line4 = "Be Heard";
         }
     })
 
@@ -144,6 +150,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l2").text(e.target.value)
             mainElementData.line2 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line2 = "Be Understood";
         }
     })
 
@@ -151,13 +159,17 @@ $(document).ready(function(){
         if(e.target.value.length <= 22){
             $(".l5").text(e.target.value)
             mainElementData.line5 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line5 = "Method";
         }
-    })
+    });
 
     $("input[name='Digital Assets']").keyup(function(e){
         if(e.target.value.length <= 31){
             $(".l7").text(e.target.value)
             mainElementData.line7 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line7 = "Digital Access";
         }
     })
 
@@ -165,6 +177,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l6").text(e.target.value)
             mainElementData.line6 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line6 = "Digital Keystone Foundations";
         }
     })
 
@@ -172,6 +186,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l8").text(e.target.value)
             mainElementData.line8 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line8 = "Digital Ecosystem";
         }
     })
 
@@ -179,6 +195,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 22){
             $(".l16").text(e.target.value)
             mainElementData.line16 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line16 = "Process";
         }
     })
 
@@ -186,6 +204,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l18").text(e.target.value)
             mainElementData.line18 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line18 = "Value Creation";
         }
     })
 
@@ -193,6 +213,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l19").text(e.target.value)
             mainElementData.line19 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line19 = "Digital Experience";
         }
     })
 
@@ -200,6 +222,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l17").text(e.target.value)
             mainElementData.line17 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line17 = "Digital Delivery";
         }
     })
 
@@ -207,6 +231,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 22){
             $(".l12").text(e.target.value)
             mainElementData.line12 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line12 = "Story";
         }
     })
 
@@ -214,6 +240,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l14").text(e.target.value)
             mainElementData.line14 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line14 = "Adaptable";
         }
     })
 
@@ -221,6 +249,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l15").text(e.target.value)
             mainElementData.line15 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line15 = "Connected";
         }
     })
 
@@ -228,6 +258,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 31){
             $(".l13").text(e.target.value)
             mainElementData.line13 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line13 = "Resourceful";
         }
     })
 
@@ -235,6 +267,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 15){
             $(".l11").text(`#${e.target.value}`)
             mainElementData.line11 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line11 = "#TheBlackWire";
         }
     })
 
@@ -242,6 +276,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 15){
             $(".l9").text(`#${e.target.value}`)
             mainElementData.line9 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line9 = "#DigitalLeaderShip";
         }
     })
 
@@ -249,6 +285,8 @@ $(document).ready(function(){
         if(e.target.value.length <= 15){
             $(".l10").text(`#${e.target.value}`)
             mainElementData.line10 = e.target.value
+        }else if(e.target.value.length === 0){
+            mainElementData.line10 = "#DigitalGenius";
         }
     })
 
