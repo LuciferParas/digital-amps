@@ -8,10 +8,10 @@ from pathlib import Path
 app =Flask(__name__)
 
 app.config['SECRET_KEY'] = 'f9bf78b9a18ce6d46a0cd2b0b86df9da'
-app.config['MAIL_SERVER'] = 'smtpout.secureserver.net'
+app.config['MAIL_SERVER'] = 'mail.stratahedron.digital'
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] ="donotreply@niompmo.com"
-app.config['MAIL_PASSWORD'] = "niompmo@12345"
+app.config['MAIL_USERNAME'] ="create@stratahedron.digital"
+app.config['MAIL_PASSWORD'] = "Create123!@#"
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
 
@@ -240,7 +240,7 @@ def creator_studio():
             data_ls.append(data)
         
         file_name = editPDF(dict(zip(data_ls,coordinate_ls)))
-        msg = Message("Your Digital Buisness Stratahedron Model, You Created Has Arrived", sender = 'donotreply@niompmo.com', recipients = [request.form["email"]],cc=['projects@nanotech-softapp.com'])
+        msg = Message("Your Digital Buisness Stratahedron Model, You Created Has Arrived", sender = 'create@stratahedron.digital', recipients = [request.form["email"]],cc=['doyle@dept.digital'])
         msg.html = emailTemp(request)
         with app.open_resource(f"{file_name}") as fp:
             msg.attach(f"{Path(file_name).stem}.pdf",'document/pdf', fp.read())
