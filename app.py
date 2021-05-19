@@ -4,6 +4,7 @@ from flask_mail import Message, Mail
 from pdf_generator import editPDF
 from pathlib import Path
 
+
 app =Flask(__name__)
 
 app.config['SECRET_KEY'] = 'f9bf78b9a18ce6d46a0cd2b0b86df9da'
