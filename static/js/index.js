@@ -30,7 +30,7 @@ $(document).ready(function(){
         },
         "Content #Hashtags":{
             "Ultimately, what are the 3 aspects that are fundamental or foundational to you and to your audience? What do they want to hear? How do you and them express these concepts? What is at the core of what you talk about? What do you want to discover and demonstrate? ":
-                ["#Hashtag Concept #","TheBlackWire", "DigitalLeaderShip",'DigitalGenius']
+                ["#Hashtag Concept #","#TheBlackWire", "#DigitalLeadership",'#DigitalGenius']
         },
     }
 
@@ -43,9 +43,9 @@ $(document).ready(function(){
         line6:"Digital Keystone Foundations",
         line7:"Digital Assets",
         line8:"Digital Ecosystem",
-        line9:"#DigitalLeaderShip",
-        line10:"#DigitalGenius",
-        line11:"#TheBlackWire",
+        line9:"#TheBlackWire",
+        line10:"#DigitalLeaderShip",
+        line11:"#DigitalGenius",
         line12:"Story",
         line13:"Resourceful",
         line14:"Adaptable",
@@ -263,7 +263,7 @@ $(document).ready(function(){
         }
     })
 
-    $("input[name='TheBlackWire']").keyup(function(e){
+    $("input[name='#TheBlackWire']").keyup(function(e){
         if(e.target.value.length <= 15){
             $(".l11").text(`#${e.target.value}`)
             mainElementData.line11 = e.target.value
@@ -272,7 +272,7 @@ $(document).ready(function(){
         }
     })
 
-    $("input[name='DigitalLeaderShip']").keyup(function(e){
+    $("input[name='#DigitalLeadership']").keyup(function(e){
         if(e.target.value.length <= 15){
             $(".l9").text(`#${e.target.value}`)
             mainElementData.line9 = e.target.value
@@ -281,7 +281,7 @@ $(document).ready(function(){
         }
     })
 
-    $("input[name='DigitalGenius']").keyup(function(e){
+    $("input[name='#DigitalGenius']").keyup(function(e){
         if(e.target.value.length <= 15){
             $(".l10").text(`#${e.target.value}`)
             mainElementData.line10 = e.target.value
@@ -290,15 +290,7 @@ $(document).ready(function(){
         }
     })
 
-
-    $(".pop-up").click(function(){
-        $(".reg-outer-container").css({'display':'flex'});
-    })
-
-
-    $(".cross").click(function(){
-        $(".reg-outer-container").hide();
-    })
+    let docReload = false;
 
     var csrf_token = "{{ csrf_token() }}";
 
@@ -366,6 +358,7 @@ $(document).ready(function(){
                     $(".download").append(`
                         <a href="${window.location.origin}/static/pdf/${JSON.parse(data).link}" download>Click Here</a> to download & email your Stratahedron Model Design.
                     `)
+                    docReload = true;
                 },
                 error: function(error) {
                     $("#reg-form1").show();
@@ -380,6 +373,16 @@ $(document).ready(function(){
        }
        return false;
     });
+
+    $(".pop-up").click(function(){
+        $(".reg-outer-container").css({'display':'flex'});
+    })
+
+
+    $(".cross").click(function(){
+        $(".reg-outer-container").hide();
+        docReload ? window.location.reload():false;
+    })
     $('.rf0').keyup(function(){
         $('.rf0').css({"border":"1px solid black"})
     })

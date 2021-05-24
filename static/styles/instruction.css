@@ -9,7 +9,7 @@ a {
 }
 
 .instruction-box img {
-  height: 600px;
+  height: 700px;
   width: 100%;
   object-fit: fill;
   border-radius: 10px;
@@ -24,7 +24,7 @@ a {
 }
 
 .instruction-image-text-outer img {
-  width: 50%;
+  width: 45%;
   height: 35vw;
   object-fit: contain;
 }

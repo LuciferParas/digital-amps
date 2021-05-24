@@ -123,7 +123,7 @@ def emailTemp(request):
         thicker the paper the better)
       </p>
       <p style="font-size: 16px; font-weight: 450;margin-left: 3%;">
-        <span style="font-weight: 700">2. </span>Cut your Stratehedron<sup
+        <span style="font-weight: 700">2. </span>Cut your Stratahedron<sup
           style="font-size: 12px"
           >TM</sup
         >
@@ -153,8 +153,8 @@ def emailTemp(request):
       <p style="display: block; float:left;width:100%;font-size: 16px; font-weight: 450;margin-left: 3%;">
         <span style="font-weight: 700">1. </span>Play with it and see how it all
         fits together. If you want to change it, go back to Stratahedron.digital
-        <a href="https://demo-digiatl-amps.herokuapp.com/"
-          >https://demo-digiatl-amps.herokuapp.com/</a
+        <a href="www.stratahedron.digital"
+          >www.stratahedron.digital</a
         >
         and create a new one.
       </p>
@@ -240,7 +240,7 @@ def creator_studio():
             data_ls.append(data)
         
         file_name = editPDF(dict(zip(data_ls,coordinate_ls)))
-        msg = Message("Your Digital Buisness Stratahedron Model, You Created Has Arrived", sender = 'create@stratahedron.digital', recipients = [request.form["email"]],cc=['doyle@dept.digital'])
+        msg = Message("The Digital Business Stratahedron Model That You Created Has Arrived", sender = 'create@stratahedron.digital', recipients = [request.form["email"]],cc=['doyle@dept.digital'])
         msg.html = emailTemp(request)
         with app.open_resource(f"{file_name}") as fp:
             msg.attach(f"{Path(file_name).stem}.pdf",'document/pdf', fp.read())
