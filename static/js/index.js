@@ -393,7 +393,7 @@ $(document).ready(function(){
                     $(".reg-form-inner").css({"height":"auto"})
                     $(".load-cont").css({"display":'none'});
                     console.log(error)
-                    $(".error").empty().text("Some unrecognized error");
+                    $(".error").empty().text("Please Fill the Form correctly");
                 },
             })
        }
