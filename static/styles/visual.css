@@ -1,5 +1,6 @@
 .visual-font-large {
   font-size: 1.3vw;
+  line-height: 0.8;
 }
 
 .visual-font-medium {
@@ -27,21 +28,51 @@
 }
 
 .head1 {
-  width: 100%;
+  width: 15ch;
+  height: 4ch;
   transform: rotate(-45deg);
   position: absolute;
-  bottom: 65%;
-  left: -19%;
+  bottom: 57%;
+  display: flex;
+  flex-wrap: wrap;
+  word-break: break-all;
+  left: 6%;
   text-align: center;
 }
 
 .head2 {
-  width: 100%;
   transform: rotate(-45deg);
   position: absolute;
-  bottom: 27%;
-  left: 19%;
+  bottom: 24%;
+  width: 15ch;
+  word-break: break-all;
+  left: 42%;
   text-align: center;
+}
+
+/*All the lines to be rendered in SVG*/
+/*Centered Titles*/
+.l {
+  display: flex;
+  justify-content: center;
+  word-break: break-all;
+  font-weight: 600;
+  width: 90px !important;
+  text-align: center;
+  line-height: 1;
+}
+/*Triangle Borders*/
+.lBorders {
+  font-size: 11px;
+  display: flex;
+  white-space: nowrap;
+  justify-content: center;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+}
+.lHashtags {
+  font-size: 08px;
 }
 
 .line1 {

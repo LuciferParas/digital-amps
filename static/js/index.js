@@ -1,3 +1,13 @@
+/*
+* Modifications to be made
+* TODO:
+*    -> Change word limits
+*    -> Document the file/project with comments
+*    ->
+*
+* */
+
+// Load the text (questions) to be Rendered in the UI, when the document's ready
 $(document).ready(function(){
     const elementData = {
         "Element 1 Questions: [A] Audience":{
@@ -33,6 +43,8 @@ $(document).ready(function(){
                 ["#Hashtag Concept #","#TheBlackWire", "#DigitalLeadership",'#DigitalGenius']
         },
     }
+
+    // Data to be prefilled in the input boxes
 
     const mainElementData = {
         line1:"Audience",
@@ -110,7 +122,7 @@ $(document).ready(function(){
                 </div>
             `;
             val = val + str
-            
+
         })
         $(".qa").append(
             val
@@ -119,176 +131,190 @@ $(document).ready(function(){
 
     outerElement();
 
-    $("input[name='Audience']").keyup(function(e){
-        if(e.target.value.length <= 22){
-            $(".l1").text(e.target.value);
-            mainElementData.line1 = e.target.value;
-        }else if(e.target.value.length === 0){
-            mainElementData.line1 = "Audience";
-        }
-    })
+    // Element 1
+        // Question : 1 (Audience)
+        $("input[name='Audience']").keyup(function(e){
+            if(e.target.value.length <= 32){
+                $(".l1").text(e.target.value);
+                mainElementData.line1 = e.target.value;
+            }else if(e.target.value.length === 0){
+                mainElementData.line1 = "Audience";
+            }
+        })
 
-    $("input[name='Be Seen']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l3").text(e.target.value)
-            mainElementData.line3 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line3 = "Be seen";
-        }
-    })
+        // Question : 2 (3 Critical Concepts)
 
-    $("input[name='Be Heard']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l4").text(e.target.value)
-            mainElementData.line4 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line4 = "Be Heard";
-        }
-    })
+            // Concept 1: Be Seen
+            $("input[name='Be Seen']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l3").text(e.target.value)
+                    mainElementData.line3 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line3 = "Be seen";
+                }
+            })
 
-    $("input[name='Be Understood']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l2").text(e.target.value)
-            mainElementData.line2 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line2 = "Be Understood";
-        }
-    })
-
-    $("input[name='Method']").keyup(function(e){
-        if(e.target.value.length <= 22){
-            $(".l5").text(e.target.value)
-            mainElementData.line5 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line5 = "Method";
-        }
-    });
-
-    $("input[name='Digital Assets']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l7").text(e.target.value)
-            mainElementData.line7 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line7 = "Digital Access";
-        }
-    })
-
-    $("input[name='Digital Keystone Foundations']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l6").text(e.target.value)
-            mainElementData.line6 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line6 = "Digital Keystone Foundations";
-        }
-    })
-
-    $("input[name='Digital Ecosystem']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l8").text(e.target.value)
-            mainElementData.line8 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line8 = "Digital Ecosystem";
-        }
-    })
-
-    $("input[name='Process']").keyup(function(e){
-        if(e.target.value.length <= 22){
-            $(".l16").text(e.target.value)
-            mainElementData.line16 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line16 = "Process";
-        }
-    })
-
-    $("input[name='Value Creation']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l18").text(e.target.value)
-            mainElementData.line18 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line18 = "Value Creation";
-        }
-    })
-
-    $("input[name='Digital Experience']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l19").text(e.target.value)
-            mainElementData.line19 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line19 = "Digital Experience";
-        }
-    })
-
-    $("input[name='Digital Delivery']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l17").text(e.target.value)
-            mainElementData.line17 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line17 = "Digital Delivery";
-        }
-    })
-
-    $("input[name='Story']").keyup(function(e){
-        if(e.target.value.length <= 22){
-            $(".l12").text(e.target.value)
-            mainElementData.line12 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line12 = "Story";
-        }
-    })
-
-    $("input[name='Adaptable']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l14").text(e.target.value)
-            mainElementData.line14 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line14 = "Adaptable";
-        }
-    })
-
-    $("input[name='Connected']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l15").text(e.target.value)
-            mainElementData.line15 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line15 = "Connected";
-        }
-    })
-
-    $("input[name='Resourceful']").keyup(function(e){
-        if(e.target.value.length <= 31){
-            $(".l13").text(e.target.value)
-            mainElementData.line13 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line13 = "Resourceful";
-        }
-    })
-
-    $("input[name='#TheBlackWire']").keyup(function(e){
-        if(e.target.value.length <= 15){
-            $(".l11").text(`#${e.target.value}`)
-            mainElementData.line11 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line11 = "#TheBlackWire";
-        }
-    })
-
-    $("input[name='#DigitalLeadership']").keyup(function(e){
-        if(e.target.value.length <= 15){
-            $(".l9").text(`#${e.target.value}`)
-            mainElementData.line9 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line9 = "#DigitalLeaderShip";
-        }
-    })
-
-    $("input[name='#DigitalGenius']").keyup(function(e){
-        if(e.target.value.length <= 15){
-            $(".l10").text(`#${e.target.value}`)
-            mainElementData.line10 = e.target.value
-        }else if(e.target.value.length === 0){
-            mainElementData.line10 = "#DigitalGenius";
-        }
-    })
+            // Concept 2: Be Heard
+            $("input[name='Be Heard']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l4").text(e.target.value)
+                    mainElementData.line4 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line4 = "Be Heard";
+                }
+            })
+            // Concept 3: Be Understood
+            $("input[name='Be Understood']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l2").text(e.target.value)
+                    mainElementData.line2 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line2 = "Be Understood";
+                }
+            })
+    // Element 2 : Method
+        // Question : 1 (Method Name)
+        $("input[name='Method']").keyup(function(e){
+            if(e.target.value.length <= 20){
+                $(".l5").text(e.target.value)
+                mainElementData.line5 = e.target.value
+            }else if(e.target.value.length === 0){
+                mainElementData.line5 = "Method";
+            }
+        });
+        // Question : 2 (3 Critical Concepts)
+            // Concept 1 : Digital Assets
+            $("input[name='Digital Assets']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l7").text(e.target.value)
+                    mainElementData.line7 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line7 = "Digital Access";
+                }
+            })
+            // Concept 2 : Digital Keystone Foundations
+            $("input[name='Digital Keystone Foundations']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l6").text(e.target.value)
+                    mainElementData.line6 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line6 = "Digital Keystone Foundations";
+                }
+            })
+            // Concept 3 : Digital Ecosystem
+            $("input[name='Digital Ecosystem']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l8").text(e.target.value)
+                    mainElementData.line8 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line8 = "Digital Ecosystem";
+                }
+            })
+    // Element : 3 (Process)
+        // Question 1 : Process Name
+            $("input[name='Process']").keyup(function(e){
+                if(e.target.value.length <= 32){
+                    $(".l16").text(e.target.value)
+                    mainElementData.line16 = e.target.value
+                } else if(e.target.value.length === 0){
+                    mainElementData.line16 = "Process";
+                }
+            })
+        // Question 2 : (3 Critical Concepts)
+            // Concept 1 : Value Creation
+            $("input[name='Value Creation']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l18").text(e.target.value)
+                    mainElementData.line18 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line18 = "Value Creation";
+                }
+            })
+            // Concept 2 : Digital Experience
+            $("input[name='Digital Experience']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l19").text(e.target.value)
+                    mainElementData.line19 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line19 = "Digital Experience";
+                }
+            })
+            // Concept 3 : Digital Delivery
+            $("input[name='Digital Delivery']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l17").text(e.target.value)
+                    mainElementData.line17 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line17 = "Digital Delivery";
+                }
+            })
+    // Element 4 : Story
+        // Question 1 : Story Name
+        $("input[name='Story']").keyup(function(e){
+            if(e.target.value.length <= 32){
+                $(".l12").text(e.target.value)
+                mainElementData.line12 = e.target.value
+            }else if(e.target.value.length === 0){
+                mainElementData.line12 = "Story";
+            }
+        })
+        // Question 2 : (3 Critical Concepts)
+            // Concept 1 : Adaptable
+            $("input[name='Adaptable']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l14").text(e.target.value)
+                    mainElementData.line14 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line14 = "Adaptable";
+                }
+            })
+            // Concept 2 : Connected
+            $("input[name='Connected']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l15").text(e.target.value)
+                    mainElementData.line15 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line15 = "Connected";
+                }
+            })
+            // Concept 3 : Resourceful
+            $("input[name='Resourceful']").keyup(function(e){
+                if(e.target.value.length <= 28){
+                    $(".l13").text(e.target.value)
+                    mainElementData.line13 = e.target.value
+                }else if(e.target.value.length === 0){
+                    mainElementData.line13 = "Resourceful";
+                }
+            })
+    // Content Hashtags
+        // Question : 3 Aspects
+            // Hastag Concept 1 : #TheBlackWire
+            $("input[name='#TheBlackWire']").keyup(function(e){
+                if(e.target.value.length <= 15){
+                    $(".l11").text(`#${e.target.value}`)
+                    mainElementData.line11 = `#${e.target.value}`
+                }else if(e.target.value.length === 0){
+                    mainElementData.line11 = "#TheBlackWire";
+                }
+            })
+            // Hastag Concept 2 : #DigitalLeadership
+            $("input[name='#DigitalLeadership']").keyup(function(e){
+                if(e.target.value.length <= 15){
+                    $(".l9").text(`#${e.target.value}`)
+                    mainElementData.line9 = `#${e.target.value}`
+                }else if(e.target.value.length === 0){
+                    mainElementData.line9 = "#DigitalLeaderShip";
+                }
+            })
+            // Hastag Concept 3 : #DigitalGenius
+            $("input[name='#DigitalGenius']").keyup(function(e){
+                if(e.target.value.length <= 15){
+                    $(".l10").text(`#${e.target.value}`)
+                    mainElementData.line10 = `#${e.target.value}`
+                }else if(e.target.value.length === 0){
+                    mainElementData.line10 = "#DigitalGenius";
+                }
+            })
 
     let docReload = false;
 
