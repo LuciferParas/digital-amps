@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, json, send_from_directory
 from flask_wtf.csrf import CSRFProtect
 from flask_mail import Message, Mail
 # from pdf_generator import editPDF
-from demo3 import editPDF
+from pdf_generator import editPDF
 from pathlib import Path
 
 
